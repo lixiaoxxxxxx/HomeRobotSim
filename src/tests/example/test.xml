@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test>
+<env mis="off" err="off" ans="off">
+    <info>
+    (at 0 1) (plate 0) (hold 0)
+    (sort 1 human) (at 1 1) (size 1 big)
+    (sort 2 couch) (at 2 2) (size 2 big)
+    (sort 3 table) (at 3 3) (size 3 big)
+    (sort 4 cupboard) (at 4 4) (size 4 big)
+        (type 4 container) (closed 4)
+    (sort 5 refrigerator) (at 5 5) (size 5 big)
+        (type 5 container) (closed 5)
+    (sort 6 book) (at 6 3) (color 6 red) (size 6 small)
+    (sort 7 can) (color 7 red) (size 7 small)
+    (sort 8 can) (color 8 green) (size 8 small)
+    (sort 9 bottle) (color 9 red) (size 9 small)
+    (sort 10 bottle) (at 10 2) (color 10 green)
+    </info>
+    <mis>
+    (at 7 4) (at 9 2)
+    </mis>
+    <err>
+        <r>(inside 8 5) (size 10 small)</r>
+        <w>(inside 8 3) (size 10 big)</w>
+    </err>
+    <extra>
+    (at 7 5)
+    </extra>
+</env>
+<instr>
+(:ins (:task (puton X Y) (:cond (sort X can) (color X green)
+          (sort Y table)))
+      (:task (close X) (:cond (type X container)))
+      (:cons_notnot
+          (:info (at X Y)
+              (:cond (sort X can) (sort Y refrigerator)))))
+</instr>
+<nl>
+Put the can which is green on the table.
+Close the door of each container.
+There must be a can in the refrigerator.
+</nl>
+</test>

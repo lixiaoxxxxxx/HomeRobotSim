@@ -1,0 +1,7 @@
+/home/legend/myfile/homesimulation/Planner-release-2.07-src/src/CMakeFiles/asp.dir
+/home/legend/myfile/homesimulation/Planner-release-2.07-src/src/CMakeFiles/cserver.dir
+/home/legend/myfile/homesimulation/Planner-release-2.07-src/example/CMakeFiles/example.dir
+/home/legend/myfile/homesimulation/Planner-release-2.07-src/src/CMakeFiles/frame.dir
+/home/legend/myfile/homesimulation/Planner-release-2.07-src/suzaku/CMakeFiles/suzaku.dir
+/home/legend/myfile/homesimulation/Planner-release-2.07-src/src/CMakeFiles/utility.dir
+/home/legend/myfile/homesimulation/Planner-release-2.07-src/tools/gen_tests/CMakeFiles/validator.dir

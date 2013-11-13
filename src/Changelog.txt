@@ -1,0 +1,52 @@
+= 2.07 Release =
+Released: 2013-10-16
+== Bug Fixes ==
+ * Wrong scoring
+ * Wrong evaluation
+
+= 2.06 Release =
+Released: 2013-10-15
+== Features ==
+ * Demo tests for the @Home Simulation 2013
+== Bug Fixes ==
+ * Malfunctioning timer returns wrong time interval
+
+= 2.05 Beta =
+Released: 2013-8-14
+== Features ==
+ * The test generator outputs the predicates that are sorted by 'obj_id'
+== Bug Fixes ==
+ * Wrong feedbacks of action 'fromPlate'
+ * Could not copy the generated test files from '_tmp' in Windows, due to the ill-formed copy command
+ * The permission of iclingo is changed while copying
+
+= 2.04 Beta =
+Released: 2013-7-31
+== Features ==
+ * Add a test generator
+ * System support: Ubuntu 13.04 x86, gcc 4.7.3
+== Bug Fixes ==
+ * Wrong feedbacks of some actions
+
+= 2.03 Beta =
+Released: 2013-3-27
+== Features ==
+ * System support: Ubuntu 12.10 amd64, gcc 4.7.2
+== Bug Fixes ==
+ * Compile failure in Ubuntu amd64
+
+= 2.02 Beta =
+Released: 2013-3-11
+== Features ==
+ * Support the Ubuntu 12.04 i386
+
+= 2.01 Beta =
+Released: 2013-1-7
+== Bug Fixes ==
+ * Fix a bug of -cheat
+
+= 2.00 Beta =
+Released: 2012-10-30
+== Features ==
+ * Online feedback for executing actions
+ * Support the Windows Platform (Win7, VS10)

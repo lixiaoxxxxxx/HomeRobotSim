@@ -1,0 +1,1 @@
+/usr/bin/c++  -fPIC    -shared -Wl,-soname,libasp.so -o ../lib/libasp.so CMakeFiles/asp.dir/evaluate.cpp.o CMakeFiles/asp.dir/aspgrader.cpp.o ../lib/libutility.a -lboost_chrono-mt -lboost_thread-mt -lpthread -lboost_system-mt -lboost_date_time-mt -lboost_regex-mt 

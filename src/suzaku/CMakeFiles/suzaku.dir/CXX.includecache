@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/legend/myfile/homesimulation/Planner-release-2.07-src/suzaku/suzaku.cpp
+suzaku.hpp
+/home/legend/myfile/homesimulation/Planner-release-2.07-src/suzaku/suzaku.hpp
+iostream
+-
+
+/home/legend/myfile/homesimulation/Planner-release-2.07-src/suzaku/suzaku.hpp
+cserver/plug.hpp
+/home/legend/myfile/homesimulation/Planner-release-2.07-src/suzaku/cserver/plug.hpp
+
+include/cserver/plug.hpp
+string
+-
+vector
+-
+boost/cstdint.hpp
+-
+boost/shared_ptr.hpp
+-
+boost/array.hpp
+-
+

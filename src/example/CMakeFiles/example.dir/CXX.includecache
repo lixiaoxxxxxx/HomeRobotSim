@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/legend/myfile/homesimulation/Planner-release-2.07-src/example/devil.cpp
+devil.hpp
+/home/legend/myfile/homesimulation/Planner-release-2.07-src/example/devil.hpp
+iostream
+-
+
+/home/legend/myfile/homesimulation/Planner-release-2.07-src/example/devil.hpp
+cserver/plug.hpp
+/home/legend/myfile/homesimulation/Planner-release-2.07-src/example/cserver/plug.hpp
+
+/home/legend/myfile/homesimulation/Planner-release-2.07-src/example/main.cpp
+devil.hpp
+/home/legend/myfile/homesimulation/Planner-release-2.07-src/example/devil.hpp
+
+include/cserver/plug.hpp
+string
+-
+vector
+-
+boost/cstdint.hpp
+-
+boost/shared_ptr.hpp
+-
+boost/array.hpp
+-
+

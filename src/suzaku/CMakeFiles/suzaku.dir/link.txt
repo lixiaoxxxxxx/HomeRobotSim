@@ -1,0 +1,1 @@
+/usr/bin/c++       CMakeFiles/suzaku.dir/suzaku.cpp.o CMakeFiles/suzaku.dir/main.cpp.o  -o ../bin/suzaku -rdynamic ../lib/libframe.a ../lib/libutility.a -lboost_chrono-mt -lboost_thread-mt -lpthread -lboost_system-mt -lboost_date_time-mt -lboost_regex-mt 

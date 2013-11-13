@@ -1,0 +1,2 @@
+/usr/bin/ar cr ../lib/libframe.a  CMakeFiles/frame.dir/plug.cpp.o CMakeFiles/frame.dir/message.cpp.o CMakeFiles/frame.dir/param.cpp.o CMakeFiles/frame.dir/serialization.cpp.o CMakeFiles/frame.dir/xmllabel.cpp.o
+/usr/bin/ranlib ../lib/libframe.a
