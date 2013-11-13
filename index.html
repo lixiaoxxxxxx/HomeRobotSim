@@ -1,0 +1,395 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<!--
+  **
+  *
+  * Author:  Legend Lee
+  *  Email:  legendlee1314@gmail.com
+  *
+  **
+-->
+<head>
+  <meta charset="UTF-8">
+  <title>Rules Summary</title>
+  <style type="text/css">
+    body {
+      margin: 0 auto;
+      padding: 10;
+      width: 80%;
+      background-color: rgb(248, 248, 248);
+    }
+    .main {
+      margin: 0 auto;
+      padding: 10;
+      width: 90%;
+      background-color: rgb(248, 248, 248);
+    }
+    .intro {
+      margin: 0 auto;
+      padding: 10;
+      background-color: #FFFACD;
+      border: 1px solid rgb(221, 221, 221);
+    }
+    .scenes {
+      margin: 0 auto;
+      padding: 10;
+      background-color: #CAE1FF;
+      border: 1px solid rgb(221, 221, 221);
+    }
+    .action {
+      margin: 0 auto;
+      padding: 10;
+      background-color: #FFF0F5;
+      border: 1px solid rgb(221, 221, 221);
+    }
+    .task {
+      margin: 0 auto;
+      padding: 10;
+      background-color: #F0FFF0;
+      border: 1px solid rgb(221, 221, 221);
+    }
+    .algorithm {
+      margin: 0 auto;
+      padding: 10;
+      background-color: #D1D1D1;
+      border: 1px solid rgb(221, 221, 221);
+    }
+    .platform {
+      margin: 0 auto;
+      padding: 10;
+      background-color: #FFFFFF;
+      border: 1px solid rgb(221, 221, 221);
+    }
+    .list_table {
+      margin: 0 auto;
+      padding: 10;
+      border: 3px solid rgb(238, 238, 238); 
+    }
+    .list_table td, .list_table th {
+      border: 1px solid rgb(238, 238, 238); 
+    }
+    .title {
+      font-size: 150%;
+    }
+    .center {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="main">
+    <div class="intro">
+      <p class="center title">Home Robot Simulation</p>
+      <p class="center">Author: <a href="mailto:legendlee1314@gmail.com" title="Mail to Legend">Legend Lee</a> Date: 2013-11-13</p>
+      <p>Home Robot Simulation includes Human-Computer Interaction, Automatic Planning, Inference, Environmental Awareness and Re-Plannning parts. All about Home Robot Simulation Competition can be found at this website <a href="http://wrighteagle.org/homesimulation/">HomeSimulation</a>.</p>
+      <p>This project aims to search one better algorithm and make optimizations for this competition. An large improvement is the best.</p>
+      <p>The Home Robot has two wheels to move, with one paw and one plate.</p>
+      <pre>
+        <code>
+            ^ _______ ^
+           (*)_______(*)
+           |_|       |_|
+           |_|       |_|       ---~~~~~~~~---
+           |_|       |_|       \            /
+           (*)       (*)        \          /
+           /-\     [---------------------------]
+          /   \     |                         |
+          \   /     |                         |
+           \ /      |                         |
+                    |       HOME ROBOT        |
+                    |                         |
+                    |                         |
+                    |                         |
+                    \-------------------------/
+                       [---]           [---]
+                       |---|           |---|
+                       \___/           \___/
+        </code>
+      </pre>
+    </div>
+    <div class="scenes">
+      <p>These are the descriptions of the virtual scene.</p>
+      <ul>
+        <li>Scene Size: 10x10 --*-- 0, 1 ~ 99 numbers stand for location number. 0 for Robot.</li>
+        <li>Scene Object:</li>
+        <table class="list_table">
+          <tr>
+            <th>Type</th><th>Lists</th><th>Total</th>
+          </tr>
+          <tr>
+            <td>sort</td>
+            <td>human(user), plant<br>
+                couch, chair, sofa, bed(big sorts)<br>
+                table, workspace, worktable, teapoy, desk(big sorts)<br>
+                television, airconditioner(big sorts)<br>
+                washmachine, closet, cupboard, refrigerator, microwave(big sorts, containers)<br>
+                book, can, remotecontrol, bottle, cup(small sorts)</td>
+            <td>23</td>
+          </tr>
+          <tr>
+            <td>color</td><td>white, red, green, yellow, blue, black</td><td>6</td>
+          </tr>
+          <tr>
+            <td>size</td><td>big, small</td><td>2</td>
+          </tr>
+          <tr>
+            <td>type</td><td>inside, opened, closed(for containers)</td><td>3</td>
+          </tr>
+        </table>
+        <li>Robot Status: location, plate(0 for empty), hold(0 for empty)</li>
+      </ul>
+    </div>
+    <div class="action">
+      <p>There're 9 kinds of primitive actions for Home Robot.</p>
+      <table class="list_table">
+        <tr>
+          <th>action</th>
+          <th>condition</th>
+          <th>result</th>
+        </tr>
+        <tr>
+          <td>move(X)</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>pickup(A)</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>putdown(A)</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>toplate(A)</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>fromplate(A)</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>open(B)</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>close(B)</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>putin(A, B)</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>takeout(A, B)</td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+      <p>Extra: </p>
+      <p>askloc(num): ask where's the sort of number. (60% returns correct, 30% returns wrong, 10% returns unknown)</p>
+      <p>sense(): returns all sort at current location.</p>
+    </div>
+    <div class="task">
+      <p>These are the `task` definitions.</p>
+      <table class="list_table">
+        <tr>
+          <th>task</th>
+          <th>condition</th>
+          <th>result</th>
+        </tr>
+        <tr>
+          <td>give(human, obj)</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>puton(obj1, obj2)</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>goto(obj)</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>putdown(obj)</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>pickup(obj)</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>open(obj)</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>close(obj)</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>putin(obj1, obj2)</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>takeout(obj1, obj2)</td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+      <p>These are the `info` definitions.</p>
+      <table class="list_table">
+        <tr>
+          <th>info</th>
+          <th>condition</th>
+          <th>result</th>
+        </tr>
+        <tr>
+          <td>on(obj1, obj2)</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>near(obj1, obj2)</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>plate(obj)</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>inside(obj1, obj2)</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>opened(obj)</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>closed(obj)</td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+      <p>These are the `cons` definitions.</p>
+      <table class="list_table">
+        <tr>
+          <th>task</th>
+          <th>condition</th>
+          <th>result</th>
+        </tr>
+        <tr>
+          <td>not task</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>not info</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>not not info</td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+    </div>
+    <div class="platform">
+      <p>Plug interfaces</p>
+      <table class="list_table">
+        <tr>
+          <th>interfaces</th>
+          <th>descriptions</th>
+        </tr>
+        <tr>
+          <td>void Plan()</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>void Fini()</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>string& GetName()</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>string& GetEnvDes()</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>string& GetTaskDes()</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>bool Move(unsigned x)</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>bool PickUp(unsigned a)</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>bool PutDown(unsigned a)</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>bool ToPlate(unsigned a)</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>bool FromPlate(unsigned a)</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>bool Open(unsigned a)</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>bool Close(unsigned a)</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>bool PutIn(unsigned a, b)</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>bool TakeOut(unsigned a, b)</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>string AskLoc(unsigned a)</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>void Sense(set& A)</td>
+          <td></td>
+        </tr>
+      </table>
+    </div>
+    <div class="algorithm">
+      <!-- TODO --!>
+      <p>TO BE ADDED...</p>
+    </div>
+  </div>
+</body>
+</html>
